@@ -12,8 +12,8 @@ Example:
 
 Here we can see a post request with the following data:
 `?cmd=groups`
-This is really interesting, it seems like whoever was issuing this requests was able to execute commands on the webserver. Lets download these HTTP objects and examine them further.
-After downloading all those objects, we can look for some low hanging fruit by just grepping the directory for command strings like "HTB" or "flag", but alas it wont be *that* easy.
+This is really interesting, it seems like whoever was issuing this requests was able to execute commands on the webserver. Lets download these HTTP objects and examine them further.  
+After downloading all those objects, we can look for some low hanging fruit by just grepping the directory for command strings like "HTB" or "flag", but alas it wont be *that* easy.  
 My curriosity drove me to see exactly what these commands were, so I grepped for common files an attacker would want to see like `/etc/passwd` and `/etc/shadow` and we see them catting `/etc/passwd` here:
 `grep -r "cmd" .`
 ![[Pasted image 20211201213518.png]]
